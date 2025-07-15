@@ -5,4 +5,11 @@
 //  Created by Alexandr Artemov on 15.07.2025.
 //
 
-import Foundation
+struct Country {
+    let name: String
+    let image: String
+    let capital: String
+    let countryPhoneCode: String
+    let countryArea: String
+    let currency: String
+}
