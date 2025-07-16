@@ -8,7 +8,6 @@
 import UIKit
 
 final class CountryTableViewController: UITableViewController {
-
     
     private let mock = Country.getMock()
         
@@ -21,12 +20,12 @@ final class CountryTableViewController: UITableViewController {
         
         countryDetailVC.mock = mock[indexPath.section].countries[indexPath.row]
     }
-
+    
     // MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        mock.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 0
