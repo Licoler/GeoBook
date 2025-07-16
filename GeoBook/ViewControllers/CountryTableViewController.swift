@@ -26,6 +26,10 @@ final class CountryTableViewController: UITableViewController {
         mock.count
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        mock[section].name
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 0
