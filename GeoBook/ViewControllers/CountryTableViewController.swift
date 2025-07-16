@@ -31,6 +31,9 @@ final class CountryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        mock[section].countries.count
+    }
+    
         
         return 0
     }
