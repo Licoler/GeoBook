@@ -14,6 +14,9 @@ final class CountryDetailViewController: UIViewController {
     @IBOutlet var countryPhoneCodeLabel: UILabel!
     @IBOutlet var countryAreaLabel: UILabel!
     @IBOutlet var currencyLabel: UILabel!
+    
+    var mock: Country!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
