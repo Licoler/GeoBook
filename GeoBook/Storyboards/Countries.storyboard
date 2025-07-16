@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="842" y="-2"/>
         </scene>
-        <!--Country Detail View Controller-->
+        <!--Страна-->
         <scene sceneID="Rcd-g5-4vn">
             <objects>
                 <viewController id="Bd5-11-bMq" customClass="CountryDetailViewController" customModule="GeoBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,47 +58,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="833-oj-nvr">
-                                <rect key="frame" x="16" y="132.5" width="288" height="335.5"/>
+                                <rect key="frame" x="16" y="265" width="288" height="130"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7r-ua-tIh">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="189.5"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Столица:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjj-b0-apu">
-                                        <rect key="frame" x="0.0" y="205.5" width="288" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код страны:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdP-Pz-3K0">
-                                        <rect key="frame" x="0.0" y="242" width="288" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Площадь страны:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyp-J5-LuR">
-                                        <rect key="frame" x="0.0" y="278.5" width="288" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="73" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Местная валюта:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dch-3n-Brb">
-                                        <rect key="frame" x="0.0" y="315" width="288" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="109.5" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="o7r-ua-tIh">
+                                <rect key="frame" x="16" y="84" width="288" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="F6c-WH-pIz"/>
+                                    <constraint firstAttribute="width" constant="288" id="LUc-sk-7Xi"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AbS-oT-dF1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AbS-oT-dF1" firstAttribute="trailing" secondItem="833-oj-nvr" secondAttribute="trailing" constant="16" id="FHX-qt-0O3"/>
-                            <constraint firstItem="833-oj-nvr" firstAttribute="leading" secondItem="AbS-oT-dF1" secondAttribute="leading" constant="16" id="xxW-vX-lft"/>
-                            <constraint firstItem="833-oj-nvr" firstAttribute="top" secondItem="AbS-oT-dF1" secondAttribute="top" constant="20" id="yFG-vE-wKK"/>
+                            <constraint firstItem="833-oj-nvr" firstAttribute="leading" secondItem="AbS-oT-dF1" secondAttribute="leading" constant="16" id="1kc-ay-TI5"/>
+                            <constraint firstItem="o7r-ua-tIh" firstAttribute="leading" secondItem="AbS-oT-dF1" secondAttribute="leading" constant="16" id="Fyt-7S-WpH"/>
+                            <constraint firstItem="o7r-ua-tIh" firstAttribute="top" secondItem="AbS-oT-dF1" secondAttribute="top" constant="20" id="G5f-sL-m1m"/>
+                            <constraint firstItem="AbS-oT-dF1" firstAttribute="trailing" secondItem="833-oj-nvr" secondAttribute="trailing" constant="16" id="JWq-0g-bpp"/>
+                            <constraint firstItem="833-oj-nvr" firstAttribute="top" secondItem="o7r-ua-tIh" secondAttribute="bottom" constant="16" id="NGh-QT-kGh"/>
+                            <constraint firstItem="AbS-oT-dF1" firstAttribute="trailing" secondItem="o7r-ua-tIh" secondAttribute="trailing" constant="16" id="bBV-aq-gVF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Dxz-G1-NeG"/>
+                    <navigationItem key="navigationItem" title="Страна" largeTitleDisplayMode="never" id="Dxz-G1-NeG"/>
+                    <connections>
+                        <outlet property="capitalLabel" destination="Gjj-b0-apu" id="pB6-H0-wZD"/>
+                        <outlet property="countryAreaLabel" destination="gyp-J5-LuR" id="CRQ-MO-Pss"/>
+                        <outlet property="countryPhoneCodeLabel" destination="BdP-Pz-3K0" id="amn-pq-8p8"/>
+                        <outlet property="currencyLabel" destination="dch-3n-Brb" id="W1G-wG-CV3"/>
+                        <outlet property="flagImageView" destination="o7r-ua-tIh" id="dt9-ph-PkI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZP-TS-ir4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,6 +136,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NoPhoto" width="1920" height="1080"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
