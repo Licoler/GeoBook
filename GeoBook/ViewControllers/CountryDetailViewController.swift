@@ -8,7 +8,12 @@
 import UIKit
 
 final class CountryDetailViewController: UIViewController {
-
+    
+    @IBOutlet var flagImageView: UIImageView!
+    @IBOutlet var capitalLabel: UILabel!
+    @IBOutlet var countryPhoneCodeLabel: UILabel!
+    @IBOutlet var countryAreaLabel: UILabel!
+    @IBOutlet var currencyLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
