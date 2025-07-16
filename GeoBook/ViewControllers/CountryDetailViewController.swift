@@ -19,8 +19,10 @@ final class CountryDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupShadowImageView()
         configureUI()
+    }
     
     private func configureUI() {
         title = mock.name
@@ -30,5 +32,12 @@ final class CountryDetailViewController: UIViewController {
         countryAreaLabel.text = "Площадь страны: \(mock.countryArea) км²"
         currencyLabel.text = "Местная валюта: \(mock.currency)"
     }
+    
+    private func setupShadowImageView() {
+        flagImageView.layer.shadowColor = UIColor.black.cgColor
+        flagImageView.layer.shadowOpacity = 0.3
+        flagImageView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        flagImageView.layer.shadowRadius = 5
+        flagImageView.clipsToBounds = false
     }
 }
