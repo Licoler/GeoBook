@@ -12,6 +12,14 @@ final class CountryTableViewController: UITableViewController {
     
     private let mock = Country.getMock()
         
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow,
+              let countryDetailVC = segue.destination as? CountryDetailViewController
+        else {
+            return
+        }
+        
+        countryDetailVC.mock = mock[indexPath.section].countries[indexPath.row]
     }
 
     // MARK: - UITableViewDataSource
