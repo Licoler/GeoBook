@@ -34,7 +34,17 @@ final class CountryTableViewController: UITableViewController {
         mock[section].countries.count
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "сountryDetailCell",
+            for: indexPath
+        )
+        var config = cell.defaultContentConfiguration()
         
-        return 0
+        config.text = mock[indexPath.section].countries[indexPath.row].name
+        cell.accessoryType = .disclosureIndicator
+        
+        cell.contentConfiguration = config
+        return cell
     }
 }
