@@ -9,9 +9,6 @@ import UIKit
 
 final class CountryTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
     }
 
     // MARK: - UITableViewDataSource
