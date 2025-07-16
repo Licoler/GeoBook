@@ -9,6 +9,9 @@ import UIKit
 
 final class CountryTableViewController: UITableViewController {
 
+    
+    private let mock = Country.getMock()
+        
     }
 
     // MARK: - UITableViewDataSource
