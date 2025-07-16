@@ -12,4 +12,8 @@ struct Country {
     let countryPhoneCode: String
     let countryArea: String
     let currency: String
+    
+    static func getMock() -> [Continent] {
+        DataStore.shared.countries
+    }
 }
