@@ -146,6 +146,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="registerButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xji-Rp-81v"/>
+                                                    <segue destination="POU-K0-9RU" kind="show" id="M4J-SY-T5y"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -173,10 +174,12 @@
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--CountryTableViewController-->
         <scene sceneID="a5I-HI-GeE">
             <objects>
-                <viewControllerPlaceholder id="POU-K0-9RU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="CountryTableViewController" storyboardName="Countries" referencedIdentifier="CountryTableViewController" id="POU-K0-9RU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="k6M-QQ-E0G"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNM-1P-5sP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781" y="-24"/>
