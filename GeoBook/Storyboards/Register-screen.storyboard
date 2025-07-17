@@ -69,7 +69,7 @@
                                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <segue destination="Y6W-OH-hqX" kind="show" id="3u4-y1-wV4"/>
+                                                            <segue destination="Y6W-OH-hqX" kind="show" id="zcJ-Ud-8P5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -101,7 +101,7 @@
         <!--Register Screen View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="RegisterScreenViewController" customModule="GeoBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="goToRegister" storyboardIdentifier="goToRegister" id="Y6W-OH-hqX" customClass="RegisterScreenViewController" customModule="GeoBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +172,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="a5I-HI-GeE">
+            <objects>
+                <viewControllerPlaceholder id="POU-K0-9RU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNM-1P-5sP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="-24"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wIW-2u-DEx">
