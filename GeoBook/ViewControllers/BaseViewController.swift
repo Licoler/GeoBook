@@ -12,7 +12,6 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackground()
-        addTapToHideKeyboard()
     }
     // MARK: - UI
     func setupBackground() {
@@ -29,12 +28,8 @@ class BaseViewController: UIViewController {
         view.sendSubviewToBack(blurView)
     }
     // MARK: - Keyboard
-    func addTapToHideKeyboard() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func hideKeyboard() {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
 }
