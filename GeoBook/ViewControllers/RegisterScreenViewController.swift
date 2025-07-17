@@ -15,6 +15,7 @@ final class RegisterScreenViewController: BaseViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     
+    static var registeredUser: UserData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,10 +85,12 @@ final class RegisterScreenViewController: BaseViewController {
             }
             return false
         }
-        
-        UserDefaults.standard.set(username, forKey: "username")
-        UserDefaults.standard.set(password, forKey: "password")
-        UserDefaults.standard.set(email, forKey: "email")
+        let newUser = UserData(
+            username: username,
+            password: password,
+            email: email
+        )
+        RegisterScreenViewController.registeredUser = newUser
         return true
     }
     

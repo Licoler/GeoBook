@@ -43,14 +43,13 @@ final class LoginScreenViewController: BaseViewController {
             return
         }
 
-        guard let savedUsername = UserDefaults.standard.string(forKey: "username"),
-              let savedPassword = UserDefaults.standard.string(forKey: "password") else {
+        guard let savedUser = RegisterScreenViewController.registeredUser else {
             showAlert(message: "Пользователь не найден. Пожалуйста, зарегистрируйтесь.")
             return
         }
-
-        if savedUsername == enteredUsername && savedPassword == enteredPassword {
-            //место для performSegue
+               
+        if savedUser.username == enteredUsername && savedUser.password == enteredPassword {
+            // performSegue
         } else {
             showAlert(message: "Неверный логин или пароль")
         }
