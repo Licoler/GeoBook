@@ -6,13 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		C21979A62E296FB4007D9C70 /* dataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21979A52E296FB4007D9C70 /* dataStorage.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		C21978B22E25C908007D9C70 /* GeoBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C21979A52E296FB4007D9C70 /* dataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,7 +45,6 @@
 		C21978A92E25C908007D9C70 = {
 			isa = PBXGroup;
 			children = (
-				C21979A42E296F44007D9C70 /* Models */,
 				C21978B42E25C908007D9C70 /* GeoBook */,
 				C21978B32E25C908007D9C70 /* Products */,
 			);
@@ -62,14 +56,6 @@
 				C21978B22E25C908007D9C70 /* GeoBook.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C21979A42E296F44007D9C70 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C21979A52E296FB4007D9C70 /* dataStorage.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +132,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C21979A62E296FB4007D9C70 /* dataStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
