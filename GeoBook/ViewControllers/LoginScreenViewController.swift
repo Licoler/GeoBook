@@ -13,11 +13,20 @@ final class LoginScreenViewController: BaseViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    private var userData: UserData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userNameTF.delegate = self
         passwordTF.delegate = self
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "loginSegue", isValidInput() {
+            return true
+        }
+        return true
     }
     
     // MARK: - Private Method
@@ -33,28 +42,45 @@ final class LoginScreenViewController: BaseViewController {
         present(alert, animated: true)
     }
     
-    // MARK: - Action
-    @IBAction func signInButtonTapped(_ sender: Any) {
+    private func isValidInput() -> Bool {
+        guard userData != nil else {
+            showAlert(message: "Пользователь не найден. Пожалуйста, зарегистрируйтесь.")
+            return false
+        }
+        
         guard let enteredUsername = userNameTF.text,
               let enteredPassword = passwordTF.text,
               !enteredUsername.isEmpty,
               !enteredPassword.isEmpty else {
             showAlert(message: "Пожалуйста, введите логин и пароль")
-            return
+            return false
         }
-
-        guard let savedUser = RegisterScreenViewController.registeredUser else {
-            showAlert(message: "Пользователь не найден. Пожалуйста, зарегистрируйтесь.")
-            return
-        }
-               
-        if savedUser.username == enteredUsername && savedUser.password == enteredPassword {
-            // performSegue
-        } else {
+        
+        guard userData?.username == enteredUsername,
+              userData?.password == enteredPassword
+        else {
             showAlert(message: "Неверный логин или пароль")
+            return false
         }
+        
+        return true
+    }
+    
+    // MARK: - Action
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+        
+        guard let sourceVC = segue.source as? RegisterScreenViewController else { return }
+        
+        userData = UserData(
+            username: sourceVC.userNameTextField.text ?? "",
+            password: sourceVC.passwordTextField.text ?? "",
+            email: sourceVC.emailTextField.text ?? ""
+        )
     }
 }
+
 extension LoginScreenViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
