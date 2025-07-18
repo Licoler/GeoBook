@@ -13,6 +13,8 @@ final class LoginScreenViewController: BaseViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    private var userData: UserData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
