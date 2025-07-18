@@ -54,6 +54,7 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="signInButtonTapped:" destination="ptG-XN-xns" eventType="touchUpInside" id="zh5-Qg-vqa"/>
+                                                            <segue destination="POU-K0-9RU" kind="presentation" modalPresentationStyle="fullScreen" id="oCB-h7-q3E"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKd-8g-yqj">
@@ -146,7 +147,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="registerButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xji-Rp-81v"/>
-                                                    <segue destination="POU-K0-9RU" kind="show" id="M4J-SY-T5y"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -172,17 +172,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1071" y="300"/>
         </scene>
-        <!--CountryTableViewController-->
+        <!--Countries-->
         <scene sceneID="a5I-HI-GeE">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="CountryTableViewController" storyboardName="Countries" referencedIdentifier="CountryTableViewController" id="POU-K0-9RU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Countries" id="POU-K0-9RU" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="k6M-QQ-E0G"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNM-1P-5sP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781" y="-24"/>
+            <point key="canvasLocation" x="1042" y="-209"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wIW-2u-DEx">
