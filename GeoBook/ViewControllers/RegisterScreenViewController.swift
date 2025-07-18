@@ -89,7 +89,7 @@ final class RegisterScreenViewController: BaseViewController {
     // MARK: - Actions
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         if validateAndSaveData() {
-            //место для performSegue
+            performSegue(withIdentifier: "unwindToLogin", sender: self)
         }
     }
 }
