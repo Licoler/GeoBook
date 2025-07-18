@@ -35,8 +35,7 @@ final class LoginScreenViewController: BaseViewController {
         present(alert, animated: true)
     }
     
-    // MARK: - Action
-    @IBAction func signInButtonTapped(_ sender: Any) {
+    private func isValidInput() -> Bool {
         guard let enteredUsername = userNameTF.text,
               let enteredPassword = passwordTF.text,
               !enteredUsername.isEmpty,
