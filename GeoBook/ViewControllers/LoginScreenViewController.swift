@@ -22,6 +22,13 @@ final class LoginScreenViewController: BaseViewController {
         passwordTF.delegate = self
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "loginSegue", isValidInput() {
+            return true
+        }
+        return true
+    }
+    
     // MARK: - Private Method
     private func showAlert(message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(
