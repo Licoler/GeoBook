@@ -36,24 +36,29 @@ final class LoginScreenViewController: BaseViewController {
     }
     
     private func isValidInput() -> Bool {
+        guard userData != nil else {
+            showAlert(message: "Пользователь не найден. Пожалуйста, зарегистрируйтесь.")
+            return false
+        }
+        
         guard let enteredUsername = userNameTF.text,
               let enteredPassword = passwordTF.text,
               !enteredUsername.isEmpty,
               !enteredPassword.isEmpty else {
             showAlert(message: "Пожалуйста, введите логин и пароль")
-            return
+            return false
         }
-
-        guard let savedUser = RegisterScreenViewController.registeredUser else {
-            showAlert(message: "Пользователь не найден. Пожалуйста, зарегистрируйтесь.")
-            return
-        }
-               
-        if savedUser.username == enteredUsername && savedUser.password == enteredPassword {
-            // performSegue
-        } else {
+        
+        guard userData?.username == enteredUsername,
+              userData?.password == enteredPassword
+        else {
             showAlert(message: "Неверный логин или пароль")
+            return false
         }
+        
+        return true
+    }
+    
     }
 }
 extension LoginScreenViewController: UITextFieldDelegate {
