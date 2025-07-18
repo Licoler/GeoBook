@@ -1,6 +1,6 @@
 
 struct UserData {
-    let username: String
-    let password: String
-    let email: String
+    var username: String
+    var password: String
+    var email: String
 }
