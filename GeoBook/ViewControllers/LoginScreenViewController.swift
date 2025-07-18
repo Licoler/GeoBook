@@ -66,8 +66,21 @@ final class LoginScreenViewController: BaseViewController {
         return true
     }
     
+    // MARK: - Action
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+        
+        guard let sourceVC = segue.source as? RegisterScreenViewController else { return }
+        
+        userData = UserData(
+            username: sourceVC.userNameTextField.text ?? "",
+            password: sourceVC.passwordTextField.text ?? "",
+            email: sourceVC.emailTextField.text ?? ""
+        )
     }
 }
+
 extension LoginScreenViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
