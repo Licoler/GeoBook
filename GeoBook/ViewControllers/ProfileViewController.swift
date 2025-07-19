@@ -30,8 +30,6 @@ final class ProfileViewController: UIViewController {
         showAlert(message: "Изменения сохранены!")
     }
         
-    @IBAction func logoutButtonTapped(_ sender: UIButton) {
-        // позже добавлю
     }
     
     // MARK: - Private Methods
