@@ -17,8 +17,6 @@ final class ProfileViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func saveChangesTapped(_ sender: UIButton) {
-        guard var user = RegisterScreenViewController.registeredUser else { return }
-
         guard let newUsername = userNameProfile.text,
               let newPassword = passwordProfile.text,
               let newEmail = emailProfile.text,
@@ -29,12 +27,6 @@ final class ProfileViewController: UIViewController {
             return
         }
 
-        user.username = newUsername
-        user.password = newPassword
-        user.email = newEmail
-            
-        RegisterScreenViewController.registeredUser = user
-        
         showAlert(message: "Изменения сохранены!")
     }
         
