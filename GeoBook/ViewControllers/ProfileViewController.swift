@@ -27,6 +27,9 @@ final class ProfileViewController: UIViewController {
             return
         }
 
+        userData.username = newUsername
+        userData.password = newPassword
+        userData.email = newEmail
         
         showAlert(message: "Изменения сохранены!") {
             self.userNameProfile.text = ""
