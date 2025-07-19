@@ -87,13 +87,15 @@ final class LoginScreenViewController: BaseViewController {
         userNameTF.text = ""
         passwordTF.text = ""
         
-        guard let sourceVC = segue.source as? RegisterScreenViewController else { return }
-        
-        userData = UserData(
-            username: sourceVC.userNameTextField.text ?? "",
-            password: sourceVC.passwordTextField.text ?? "",
-            email: sourceVC.emailTextField.text ?? ""
-        )
+        if let registerVC = segue.source as? RegisterScreenViewController {
+            userData = UserData(
+                username: registerVC.userNameTextField.text ?? "",
+                password: registerVC.passwordTextField.text ?? "",
+                email: registerVC.emailTextField.text ?? ""
+            )
+        } else if let profileVC = segue.source as? ProfileViewController {
+            userData = profileVC.userData
+        }
     }
 }
 
