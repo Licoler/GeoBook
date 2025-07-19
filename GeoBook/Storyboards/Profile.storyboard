@@ -129,7 +129,6 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="logoutButtonTapped:" destination="OKp-DZ-yB5" eventType="touchUpInside" id="kRJ-6V-Ane"/>
                                             <segue destination="StW-FM-Kc0" kind="unwind" unwindAction="unwindWithSegue:" id="ixN-Nr-AOg"/>
                                         </connections>
                                     </button>
@@ -151,7 +150,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Профиль" id="dhZ-nr-HhW"/>
                     <connections>
-                        <outlet property="EmailProfile" destination="Nqe-dv-8ny" id="5Vm-Pn-aB4"/>
+                        <outlet property="emailProfile" destination="Nqe-dv-8ny" id="D1k-q7-FqZ"/>
                         <outlet property="passwordProfile" destination="oKC-bl-Bvs" id="vSr-vJ-7zN"/>
                         <outlet property="userNameProfile" destination="sXD-BZ-EEV" id="mU6-Ax-ZrC"/>
                     </connections>
@@ -198,7 +197,7 @@
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://github.com/Licoler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91s-8F-jzh">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="github.com/Licoler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91s-8F-jzh">
                                                         <rect key="frame" x="136" y="67" width="225" height="29"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -237,19 +236,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFo-zA-yTb">
                                                 <rect key="frame" x="0.0" y="32.999999999999993" width="361" height="127.33333333333331"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2D-hS-Opk">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_5240" translatesAutoresizingMaskIntoConstraints="NO" id="P2D-hS-Opk">
                                                         <rect key="frame" x="0.0" y="8" width="114" height="120"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKu-Y0-g9H">
-                                                        <rect key="frame" x="136" y="8" width="106" height="33"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" sasha.artemov.68@mail.ru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKu-Y0-g9H">
+                                                        <rect key="frame" x="136" y="8" width="224" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQ0-Ti-qn3">
-                                                        <rect key="frame" x="136" y="63" width="117" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="github.com/Sashok007100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQ0-Ti-qn3">
+                                                        <rect key="frame" x="136" y="63" width="280" height="29"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -287,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Px-t7-6QE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3317" y="328"/>
+            <point key="canvasLocation" x="3316.7938931297708" y="327.46478873239437"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="w8C-sX-Grr">
@@ -310,6 +309,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_5240" width="2560" height="1707"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="photo_2025-04-14 13.48.16" width="1000" height="1000"/>
         <image name="для кнопки" width="245" height="152.66667175292969"/>
