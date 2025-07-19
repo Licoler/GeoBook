@@ -29,6 +29,22 @@ final class LoginScreenViewController: BaseViewController {
         return true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarVC = segue.destination as? UITabBarController
+        
+        tabBarVC?.viewControllers?.forEach { viewController in
+            if let navigationVC = viewController as? UINavigationController {
+                guard
+                    let profileVC = navigationVC.topViewController as? ProfileViewController
+                else {
+                    return
+                }
+                profileVC.userData = userData
+            }
+        }
+
+    }
+    
     // MARK: - Private Method
     private func showAlert(message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(
