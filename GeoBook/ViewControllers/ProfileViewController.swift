@@ -13,15 +13,7 @@ final class ProfileViewController: UIViewController {
     @IBOutlet var passwordProfile: UITextField!
     @IBOutlet var emailProfile: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if let user = RegisterScreenViewController.registeredUser {
-            userNameProfile.text = user.username
-            passwordProfile.text = user.password
-            emailProfile.text = user.email
-        }
-    }
+    var userData: UserData!
     
     // MARK: - Actions
     @IBAction func saveChangesTapped(_ sender: UIButton) {
