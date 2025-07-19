@@ -15,6 +15,14 @@ final class ProfileViewController: UIViewController {
     
     var userData: UserData!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        userNameProfile.text = userData.username
+        passwordProfile.text = userData.password
+        emailProfile.text = userData.email
+    }
+    
     // MARK: - Actions
     @IBAction func saveChangesTapped(_ sender: UIButton) {
         guard let newUsername = userNameProfile.text,
@@ -31,11 +39,7 @@ final class ProfileViewController: UIViewController {
         userData.password = newPassword
         userData.email = newEmail
         
-        showAlert(message: "Изменения сохранены!") {
-            self.userNameProfile.text = ""
-            self.passwordProfile.text = ""
-            self.emailProfile.text = ""
-        }
+        showAlert(message: "Изменения сохранены!") 
     }
     
     // MARK: - Private Methods
