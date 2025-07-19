@@ -27,9 +27,12 @@ final class ProfileViewController: UIViewController {
             return
         }
 
-        showAlert(message: "Изменения сохранены!")
-    }
         
+        showAlert(message: "Изменения сохранены!") {
+            self.userNameProfile.text = ""
+            self.passwordProfile.text = ""
+            self.emailProfile.text = ""
+        }
     }
     
     // MARK: - Private Methods
