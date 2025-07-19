@@ -19,12 +19,23 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="J61-h8-gJu" kind="relationship" relationship="viewControllers" id="VOI-B5-ynS"/>
+                        <segue destination="W2l-Xh-Wak" kind="relationship" relationship="viewControllers" id="DL2-Jp-yKC"/>
+                        <segue destination="J61-h8-gJu" kind="relationship" relationship="viewControllers" id="Eih-Xj-psV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ML6-TN-dzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.64122137404578" y="-2.1126760563380285"/>
+        </scene>
+        <!--Countries-->
+        <scene sceneID="CgT-9Q-PSL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Countries" id="W2l-Xh-Wak" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LZS-ZC-PPg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wvt-bz-rKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="-242"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="2fW-ZK-zWq">
@@ -119,6 +130,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="logoutButtonTapped:" destination="OKp-DZ-yB5" eventType="touchUpInside" id="kRJ-6V-Ane"/>
+                                            <segue destination="StW-FM-Kc0" kind="unwind" unwindAction="unwindWithSegue:" id="ixN-Nr-AOg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -145,8 +157,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgU-zF-jpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="StW-FM-Kc0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2101.5267175572517" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2215" y="328"/>
         </scene>
         <!--О нас-->
         <scene sceneID="cIs-gO-qky">
@@ -274,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Px-t7-6QE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3203.8167938931297" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="3317" y="328"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="w8C-sX-Grr">
@@ -293,7 +306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGG-CB-X8m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174.8091603053435" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1288" y="328"/>
         </scene>
     </scenes>
     <resources>
