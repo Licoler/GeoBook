@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     
     @IBOutlet var userNameProfile: UITextField!
     @IBOutlet var passwordProfile: UITextField!
