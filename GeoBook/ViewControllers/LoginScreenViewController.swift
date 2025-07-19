@@ -29,6 +29,22 @@ final class LoginScreenViewController: BaseViewController {
         return true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarVC = segue.destination as? UITabBarController
+        
+        tabBarVC?.viewControllers?.forEach { viewController in
+            if let navigationVC = viewController as? UINavigationController {
+                guard
+                    let profileVC = navigationVC.topViewController as? ProfileViewController
+                else {
+                    return
+                }
+                profileVC.userData = userData
+            }
+        }
+
+    }
+    
     // MARK: - Private Method
     private func showAlert(message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(
@@ -71,13 +87,15 @@ final class LoginScreenViewController: BaseViewController {
         userNameTF.text = ""
         passwordTF.text = ""
         
-        guard let sourceVC = segue.source as? RegisterScreenViewController else { return }
-        
-        userData = UserData(
-            username: sourceVC.userNameTextField.text ?? "",
-            password: sourceVC.passwordTextField.text ?? "",
-            email: sourceVC.emailTextField.text ?? ""
-        )
+        if let registerVC = segue.source as? RegisterScreenViewController {
+            userData = UserData(
+                username: registerVC.userNameTextField.text ?? "",
+                password: registerVC.passwordTextField.text ?? "",
+                email: registerVC.emailTextField.text ?? ""
+            )
+        } else if let profileVC = segue.source as? ProfileViewController {
+            userData = profileVC.userData
+        }
     }
 }
 

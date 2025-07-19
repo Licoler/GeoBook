@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TopDevelopersViewController: UIViewController {
+final class TopDevelopersViewController: UIViewController {
 
     @IBOutlet weak var profileImageViewFirst: UIImageView!
     @IBOutlet weak var profileImageViewSecond: UIImageView!

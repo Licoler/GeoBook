@@ -7,26 +7,16 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     
     @IBOutlet var userNameProfile: UITextField!
     @IBOutlet var passwordProfile: UITextField!
     @IBOutlet var emailProfile: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if let user = RegisterScreenViewController.registeredUser {
-            userNameProfile.text = user.username
-            passwordProfile.text = user.password
-            emailProfile.text = user.email
-        }
-    }
+    var userData: UserData!
     
     // MARK: - Actions
     @IBAction func saveChangesTapped(_ sender: UIButton) {
-        guard var user = RegisterScreenViewController.registeredUser else { return }
-
         guard let newUsername = userNameProfile.text,
               let newPassword = passwordProfile.text,
               let newEmail = emailProfile.text,
@@ -37,27 +27,27 @@ class ProfileViewController: UIViewController {
             return
         }
 
-        user.username = newUsername
-        user.password = newPassword
-        user.email = newEmail
-            
-        RegisterScreenViewController.registeredUser = user
+        userData.username = newUsername
+        userData.password = newPassword
+        userData.email = newEmail
         
-        showAlert(message: "Изменения сохранены!")
-    }
-        
-    @IBAction func logoutButtonTapped(_ sender: UIButton) {
-        // позже добавлю
+        showAlert(message: "Изменения сохранены!") {
+            self.userNameProfile.text = ""
+            self.passwordProfile.text = ""
+            self.emailProfile.text = ""
+        }
     }
     
     // MARK: - Private Methods
-    private func showAlert(message: String) {
+    private func showAlert(message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(
             title: nil,
             message: message,
             preferredStyle: .alert
         )
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+            completion?()
+        })
         present(alert, animated: true)
     }
 }
